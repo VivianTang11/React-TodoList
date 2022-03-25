@@ -9,6 +9,7 @@ export default function Input() {
   const tasks = ctx.tasks 
   const setTasks = ctx.setTasks 
 
+  //setting the state with objects and clears the inputfiled
   const submitTask = () => {
     setTasks(
       [...tasks,
