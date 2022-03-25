@@ -28,7 +28,9 @@ export default function TaskList() {
         <h2>Your Tasks</h2>
         {ctx.tasks.map((task, index) => (
           <article className='task' key={index}>
-            <p>{task.text}</p>
+
+            <p className={`task--title ${task.completed ? 'completed' : ''}`}>{task.text}</p>
+
             <button onClick={()=> completedTask(task.id)}><i className="fa-solid fa-check"></i></button>
             <button onClick={()=> deleteTask(task.id)}><i className="fa-solid fa-trash-can"></i></button>
           </article>
