@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, { useContext } from 'react'
 import { GlobalContext } from '../App';
 
 export default function Input() {
@@ -16,11 +16,12 @@ export default function Input() {
           text: inputText, 
           completed: false}
       ])
+    setInputText('')
   }
 
   return (
     <section className="search-section">
-        <input type="text" placeholder="Add new task here..." onChange={(e) => setInputText(e.target.value)}/>
+        <input type="text" placeholder="Add new task here..." onChange={(e) => setInputText(e.target.value)} value={inputText}/>
         <button type="submit" onClick={submitTask}>+</button>
     </section>
   )
