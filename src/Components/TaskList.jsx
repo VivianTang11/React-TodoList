@@ -6,6 +6,7 @@ export default function TaskList() {
     <section className="task-section">
         <h2>Your Tasks</h2>
         <Task />
+        <Task />
     </section>
   )
 }
