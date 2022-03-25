@@ -20,7 +20,7 @@ export default function Input() {
   }
 
   return (
-    <section className="search-section">
+    <section className="input-section">
         <input type="text" placeholder="Add new task here..." onChange={(e) => setInputText(e.target.value)} value={inputText}/>
         <button type="submit" onClick={submitTask}>+</button>
     </section>

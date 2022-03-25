@@ -21,7 +21,6 @@ export default function App() {
         <main>
           <Input />
           <Filter />
-          
           <TaskList />
         </main>
       </>
