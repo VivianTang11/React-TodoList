@@ -1,30 +1,23 @@
-import React, { createContext, useState } from "react";
-import Filter from "./Components/Filter";
-import Input from "./Components/Input";
-import TaskList from "./Components/TaskList";
-import './style.css'
+import './App.css';
+import TodoForm from './components/TodoForm';
+import TodoList from './components/TodoList';
+import TodoProvider from './providers/TodoProvider';
 
-export const GlobalContext = createContext()
-export default function App() {
-
-  const [inputText, setInputText] = useState('')
-  const [tasks, setTasks] = useState([])
-
-
-
+function App() {
   return (
-    <GlobalContext.Provider value={{inputText,setInputText,tasks,setTasks}}>
-      <>
-        <header>
-          <h1>ToDo-List</h1>
-        </header>
-        <main>
-          <Input />
-          <Filter />
-          <TaskList />
-        </main>
-      </>
-    </GlobalContext.Provider>
+    <>
+    <header>
+      <h1>ToDo-List</h1>
+    </header>
+    <main>
+      <TodoProvider>
+        <TodoForm />
+        <TodoList />
+      </TodoProvider>
+    </main>
+  </>
+
   );
 }
 
+export default App;
