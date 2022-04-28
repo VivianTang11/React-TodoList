@@ -17,9 +17,10 @@ export default function TodoForm() {
 
   return (
     <form onSubmit={handleOnSubmit}>
-      <h3>Number of todo items: {todoList.length}</h3>
-      <input type="text" value={todoItem} onChange={(e) => setTodoItem(e.target.value)}/>
-      <button type='submit'>Submit</button>
+      <h3>Number of tasks: {todoList.length}</h3>
+        <input type="text" placeholder='Type your task here...' value={todoItem} onChange={(e) => setTodoItem(e.target.value)}/>
+        {/* <button type='submit'>Add</button> */}
+      
     </form>
   )
 }

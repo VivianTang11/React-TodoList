@@ -6,17 +6,16 @@ import TodoProvider from './providers/TodoProvider';
 function App() {
   return (
     <>
-    <header>
-      <h1>ToDo-List</h1>
-    </header>
-    <main>
-      <TodoProvider>
-        <TodoForm />
-        <TodoList />
-      </TodoProvider>
-    </main>
-  </>
-
+      <header>
+        <h1>ToDo-List</h1>
+      </header>
+      <main>
+        <TodoProvider>
+          <TodoForm />
+          <TodoList />
+        </TodoProvider>
+      </main>
+    </>
   );
 }
 
